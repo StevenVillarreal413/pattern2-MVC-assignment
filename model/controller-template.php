@@ -13,12 +13,9 @@
     //    - Data Transfer Objects(Containers)
     //      - Object -> One Row of Data in a Table
     //      - Objects[] -> An array of Objects (Multiple Rows from Table)
-    $contactDAO = new ContactDAO();
-    $contacts = $contactDAO->getContacts(); 
     // 3. Select Next VIEW 
     //    - GET Request - Use INCLUDE
     //    - POST Request - use HEADER (Redirect)
-    include "home-view.php";
     
    
 
