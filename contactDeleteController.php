@@ -1,29 +1,29 @@
 <?php
     require_once 'model/ContactDAO.php';
-    require_once 'controller/Controller.php'
+    require_once 'controller/Controller.php';
 
-    class contactDeleteController extends Controller{
-        public function get(){
+    // class contactDeleteController extends Controller{
+    //     public function get(){
 
-        $contactID = $_GET['contactID'];
-        $contactDAO = new ContactDAO();
-        $contactDAO->deleteContact($contactID);
+    //     $contactID = $_GET['contactID'];
+    //     $contactDAO = new ContactDAO();
+    //     $contactDAO->deleteContact($contactID);
 
-        include "views/contactConfirm-view.php";
+    //     include "views/contactConfirm-view.php";
 
-        }
+    //     }
 
-        public function post(){
+    //     public function post(){
 
-            $submit = $_POST['submit'];
-            if($submit == 'Confirm)'){
-                $contactID = $_POST['contactID'];
-                $contactDAO = new ContactDAO();
-                $contactDSO -> deleteContact($contactID);
-            }
+    //         $submit = $_POST['submit'];
+    //         if($submit == 'Confirm)'){
+    //             $contactID = $_POST['contactID'];
+    //             $contactDAO = new ContactDAO();
+    //             $contactDSO -> deleteContact($contactID);
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
     //************************
     //*  Contoller Template  *
