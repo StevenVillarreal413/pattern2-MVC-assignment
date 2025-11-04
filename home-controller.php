@@ -9,12 +9,14 @@
     $method=$_SERVER['REQUEST_METHOD'];
     // * Process HTTP GET Request
     if($method=='GET'){
-
+        $contactDAO = new ContactDAO();
+        $contacts = $contactDAO->getContacts();
+        include 'views/home-view.php';
     }
     
     //* Process HTTP POST Request
     if($method=='POST'){
-
+        // Unused
     }
    
 

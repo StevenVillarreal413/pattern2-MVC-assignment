@@ -1,6 +1,6 @@
 <?php
     require_once 'model/ContactDAO.php';
-
+    require_once 'model/Contact.php';
     //************************
     //*  Contoller Template  *
     //************************
@@ -9,17 +9,19 @@
     $method=$_SERVER['REQUEST_METHOD'];
     // * Process HTTP GET Request
     if($method=='GET'){
-
+        include 'views/contactAdd-view.php';
     }
     
     //* Process HTTP POST Request
     if($method=='POST'){
         $contact = new Contact();
-        $contact -> contactID  =$_POST['contactID'];
-        $contact -> username = $_POST['username'];
-        $contact -> email = $_POST['email'];
+        $contact->username = $_POST['username'];
+        $contact->email = $_POST['email'];
 
-        $contactDAO = new contactDAO();
+        $contactDAO = new ContactDAO();
+        $contactDAO->addContact($contact);
+
+        exit;
 
     }
    

@@ -35,6 +35,7 @@
             $stmt = $connection->prepare("SELECT * FROM contacts;"); 
             $stmt->execute();
             $result = $stmt->get_result();
+            $contacts = []; //* Added this after several hours of agonizing frustration without realizing I never initialized this variable
             while($row = $result->fetch_assoc()){
                 $contact = new Contact();
                 $contact->load($row);

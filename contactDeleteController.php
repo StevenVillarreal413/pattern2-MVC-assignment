@@ -37,7 +37,7 @@
         $contactDAO = new ContactDAO();
         $contactDAO->deleteContact($contactID);
 
-        header("Location: contactListController.php");
+        header("Location: home-controller.php");
         exit;
     }
     
