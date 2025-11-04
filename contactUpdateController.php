@@ -21,6 +21,8 @@
 
         $contactDAO = new contactDAO();
 
+        include 'views/contactUpdate-views.php';
+
     }
    
 

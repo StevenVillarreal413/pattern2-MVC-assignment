@@ -9,7 +9,8 @@
     $method=$_SERVER['REQUEST_METHOD'];
     // * Process HTTP GET Request
     if($method=='GET'){
-
+        
+        include 'views/contactDeleteConfirm-view.php';
     }
     
     //* Process HTTP POST Request
