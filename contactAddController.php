@@ -1,6 +1,5 @@
 <?php
     require_once 'model/ContactDAO.php';
-    require_once 'model/Contact.php';
     //************************
     //*  Contoller Template  *
     //************************
@@ -20,6 +19,7 @@
 
         $contactDAO = new ContactDAO();
         $contactDAO->addContact($contact);
+        header("Location: home-controller.php");
 
         exit;
 
